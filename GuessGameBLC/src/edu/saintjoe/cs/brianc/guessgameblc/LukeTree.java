@@ -20,7 +20,7 @@ public class LukeTree {
 		treeTwo = new LukeTree();
 		
 		// Directly access the data member "height" of object referred to by "treeOne"
-		treeOne.height = 14;
+		treeOne.setHeight(14);
 		
 		// Invoke the method named "setHeight" on the object referred to by "treeTwo"
 		treeTwo.setHeight(80);
@@ -29,8 +29,11 @@ public class LukeTree {
 		treeTwo.species = "Elm";
 		treeOne.species = "Oak";
 		
+		treeOne.setAge(20);
+		treeTwo.setAge(50);
+		
 		System.out.println("Tree treeOne height is " + treeOne.getHeight() + " TreeOne age is " + treeOne.age);
-		System.out.println("Tree treeOne name is " + treeOne.species + " Treetwo name is " + treeTwo.species);
+		System.out.println("Tree treeOne name is " + treeOne.species + " Treetwo name is " + treeTwo.species + " tree one age is " + treeOne.age);
 	}
 	
 	// Here are our methods
@@ -40,5 +43,12 @@ public class LukeTree {
 	
 	public void setHeight(int newHeight) {
 		height = newHeight;
+	}
+	public int getAge () {
+		return age;
+	}
+	
+	public void setAge(int newAge) {
+		age = newAge;
 	}
 }
